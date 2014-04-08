@@ -10,7 +10,7 @@ set list		" 不可視文字を表示
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%,eol:↲ " 不可視文字の表記記号指定
 set lines=55		" 列
 set columns=160		" 行
-set guifont=Ricty:h14	" フォントのスタイル、サイズ
+set guifont=Ricty:h12	" フォントのスタイル、サイズ
 set transparency=5	" 背景の透明度
 set ignorecase		" 大文字小文字を区別しない
 set smartcase		" 検索文字に大文字がある場合は大文字小文字を区別
@@ -32,6 +32,11 @@ set incsearch		" インクリメンタルサーチ
 set ignorecase		" 検索時に大文字小文字を無視
 set wrapscan		" 検索時にファイルの最後まで行ったら最初へ
 set antialias		" アンチエイリアス有効
+set guioptions-=r	" 右スクロールバー非表示
+set guioptions-=R
+set guioptions-=l	" 左スクロールバー非表示
+set guioptions-=L
+
 colorscheme monokai	" カラースキーム
 
 " フルスクリーンモード
