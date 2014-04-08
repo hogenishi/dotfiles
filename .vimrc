@@ -55,6 +55,13 @@ inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
 """ NERD Tree
 map <C-n> :NERDTreeToggle<CR>
+"""" 隠しファイルを表示する。
+let NERDTreeShowHidden = 1 
+"""" 引数なしで実行したとき、NERDTreeを実行する
+let file_name = expand("%:p")
+if has('vim_starting') &&  file_name == ""
+    autocmd VimEnter * execute 'NERDTree ./'
+endif
 
 """ lightline
 let g:lightline = {
@@ -70,4 +77,9 @@ let g:lightline = {
 filetype plugin indent on
 filetype indent on
 syntax on
+
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
