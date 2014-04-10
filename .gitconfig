@@ -3,7 +3,7 @@
 	smudge = git-media-smudge %f
 [user]
 	name = Yusuke Nakanishi
-	email = yusuke.nakanishi@gmail.com
+	email = y.nakanishi@1-10.com
 [core]
 	excludesfile = /Users/yusukenakanishi/.gitignore_global
 [difftool "sourcetree"]
