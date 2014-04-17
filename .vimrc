@@ -21,6 +21,8 @@ NeoBundle 'itchyny/lightline.vim'
 "NeoBundle 'tomasr/molokai'
 NeoBundle 'sickill/vim-monokai'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'rizzatti/funcoo.vim'
+NeoBundle 'rizzatti/dash.vim'
 
 """ neocomplcache
 """" Disable AutoComplPop.
@@ -101,4 +103,3 @@ syntax on
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck
-
