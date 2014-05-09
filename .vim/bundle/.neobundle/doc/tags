@@ -173,6 +173,7 @@
 <Plug>(vimshell_int_paste_prompt)	vimshell.txt	/*<Plug>(vimshell_int_paste_prompt)*
 <Plug>(vimshell_int_previous_prompt)	vimshell.txt	/*<Plug>(vimshell_int_previous_prompt)*
 <Plug>(vimshell_int_restart_command)	vimshell.txt	/*<Plug>(vimshell_int_restart_command)*
+<Plug>(vimshell_interrupt)	vimshell.txt	/*<Plug>(vimshell_interrupt)*
 <Plug>(vimshell_move_end_argument)	vimshell.txt	/*<Plug>(vimshell_move_end_argument)*
 <Plug>(vimshell_move_head)	vimshell.txt	/*<Plug>(vimshell_move_head)*
 <Plug>(vimshell_next_prompt)	vimshell.txt	/*<Plug>(vimshell_next_prompt)*
@@ -606,6 +607,7 @@ neobundle#get()	neobundle.txt	/*neobundle#get()*
 neobundle#get_hooks()	neobundle.txt	/*neobundle#get_hooks()*
 neobundle#get_not_installed_bundle_names()	neobundle.txt	/*neobundle#get_not_installed_bundle_names()*
 neobundle#has_cache()	neobundle.txt	/*neobundle#has_cache()*
+neobundle#hooks	neobundle.txt	/*neobundle#hooks*
 neobundle#is_installed()	neobundle.txt	/*neobundle#is_installed()*
 neobundle#is_sourced()	neobundle.txt	/*neobundle#is_sourced()*
 neobundle#local()	neobundle.txt	/*neobundle#local()*
