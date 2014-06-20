@@ -78,6 +78,28 @@ alias mvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim'
 export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH="/usr/local/mysql/bin:$PATH"
 
+# git
+if which brew > /dev/null; then
+	fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+else
+	fpath=(~/.zsh/completion $fpath)
+fi
+
+autoload -U compinit
+compinit -u
+
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats ' (%b)'
+zstyle ':vcs_info:*' actionformats ' (%b|%a)'
+precmd () {
+	psvar=()
+	LANG=en_US.UTF-8 vcs_info
+	[[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+
+PROMPT="%%%1(v|%F{green}%1v%f|) "
+
+
 ###-begin-npm-completion-###
 #
 # npm command completion script
