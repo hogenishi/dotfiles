@@ -2,10 +2,12 @@
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
 [user]
-	name = Yusuke Nakanishi
+	name = hogenishi
 	email = yusuke.nakanishi@gmail.com
 [core]
 	excludesfile = /Users/yusukenakanishi/.gitignore_global
+	editor = /usr/bin/vim
+	quotepath = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -14,3 +16,9 @@
 	trustExitCode = true
 [push]
 	default = simple
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[fetch]
+	prune = true

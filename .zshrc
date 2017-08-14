@@ -1,3 +1,30 @@
+# brew error
+export PATH="$PATH:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/x11/bin:/usr/texbin:/Library/Python/2.7/site-packages"
+alias brew="env PATH=${PATH/\/Users\/\.pyenv\/shims:/} brew"
+
+# npm
+export PATH=/usr/local/share/npm/bin:$PATH
+
+#export PYTHONPATH="$HOME//lib/python2.6/site-packages/"
+#export PYTHONPATH="$HOME/Library/Python/2.7/lib/python/site-packages:/usr/local/lib/python2.7/site-packages:/Library/Python/2.7/site-packages"
+export NODE_PATH="/usr/local/lib/node_modules"
+export NPM_PATH="/usr/local/bin/npm"
+#export PATH="$PYTHONPATH:$NPM_PATH:$NODE_PATH:$PATH"
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Python virtualenv
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+
+# Virtualenvwrapper
+#if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
+#	export WORKON_HOME=$HOME/.virtualenvs
+#	source /usr/local/bin/virtualenvwrapper.sh
+#fi
+
 # 補間
 autoload -U compinit
 compinit
@@ -75,9 +102,6 @@ SAVEHIST=100000
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim'
 alias mvim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim'
 
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH="/usr/local/mysql/bin:$PATH"
-
 # git
 if which brew > /dev/null; then
 	fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
@@ -153,3 +177,15 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
+
+export PATH=$(brew --prefix)/bin:$PATH
+eval "$(rbenv init -)"
+
+export PGDATA=/usr/local/var/postgres
+
+export NODEBREW_ROOT=/usr/local/var/nodebrew
+export PATH=$NODEBREW_ROOT/current/bin:$PATH
+
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/X11/lib/pkgconfig
+
